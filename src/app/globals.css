@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #0d2040;
+  --gold: #c59b27;
+}
+
+body {
+  color: #1a202c;
+  background-color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #dfb743 0%, #c59b27 50%, #9c7a1c 100%);
+}
+
+.navy-gradient {
+  background: linear-gradient(135deg, #0d2040 0%, #1a365d 100%);
+}
