@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { 
   Phone, 
@@ -63,12 +64,6 @@ export default function Header() {
               <CheckCircle2 className="w-3.5 h-3.5" />
               Verify Certificate
             </Link>
-            <Link 
-              href="/admin" 
-              className="text-amber-300/80 hover:text-amber-300 text-[11px] transition-colors"
-            >
-              Admin Portal
-            </Link>
           </div>
         </div>
       </div>
@@ -76,10 +71,13 @@ export default function Header() {
       {/* Main Branding & Navigation Header */}
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0 flex items-center justify-center">
-            <img 
+          <div className="w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0 flex items-center justify-center relative">
+            <Image 
               src="/images/logo.png" 
               alt="Hope Theological University Official Logo" 
+              width={64}
+              height={64}
+              priority
               className="w-full h-full object-contain drop-shadow group-hover:scale-105 transition-transform" 
             />
           </div>

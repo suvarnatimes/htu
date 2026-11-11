@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { 
   Phone, 
   Mail, 
@@ -18,8 +19,15 @@ export default function Footer() {
       <div className="bg-[#0d2040] py-8 px-4 border-b border-gray-800">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4 text-center md:text-left">
-            <div className="w-14 h-14 rounded-full bg-white p-1 border-2 border-[#c59b27] flex-shrink-0">
-              <img src="/images/logo.jpg" alt="HTU Seal" className="w-full h-full object-contain" />
+            <div className="w-14 h-14 rounded-full bg-white p-1 border-2 border-[#c59b27] flex-shrink-0 relative overflow-hidden">
+              <Image 
+                src="/images/logo.jpg" 
+                alt="HTU Seal" 
+                width={56} 
+                height={56} 
+                loading="lazy" 
+                className="w-full h-full object-contain" 
+              />
             </div>
             <div>
               <h3 className="text-xl font-serif font-bold text-white">Hope Theological University</h3>

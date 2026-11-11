@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { 
   BookOpen, 
   ShieldCheck, 
@@ -136,11 +137,16 @@ export default function AboutPage() {
 
             <div className="lg:col-span-5 space-y-6">
               <div className="rounded-lg overflow-hidden border-2 border-[#c59b27]/30 shadow-lg bg-white">
-                <img 
-                  src="/images/theology-students.jpg" 
-                  alt="Theological Study Community" 
-                  className="w-full h-64 object-cover"
-                />
+                <div className="relative w-full h-64">
+                  <Image 
+                    src="/images/theology-students.jpg" 
+                    alt="Theological Study Community" 
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    className="object-cover"
+                    loading="lazy"
+                  />
+                </div>
                 <div className="p-6">
                   <h3 className="font-serif font-bold text-[#0d2040] text-lg mb-2">Our Vision for Global Leadership</h3>
                   <p className="text-xs text-gray-600 leading-relaxed">

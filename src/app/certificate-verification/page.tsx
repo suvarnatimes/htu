@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { QRCodeSVG } from 'qrcode.react';
 import { 
   Search, ShieldCheck, Printer, Download, Share2, 
@@ -60,7 +61,7 @@ export default function CertificateVerificationPage() {
       <div className="bg-[#0d2040] text-white py-8 px-4 border-b-4 border-[#c59b27] print:hidden">
         <div className="max-w-4xl mx-auto text-center space-y-2">
           <div className="inline-block p-1.5 bg-white rounded-xl shadow-lg border border-amber-300 mb-1">
-            <img src="/images/logo.png" alt="HTU Official Logo" className="h-16 w-auto object-contain mx-auto" />
+            <Image src="/images/logo.png" alt="HTU Official Logo" width={64} height={64} className="h-16 w-auto object-contain mx-auto" />
           </div>
           <h1 className="text-2xl sm:text-3xl font-serif font-bold text-amber-300">
             Official Certificate Verification Portal
@@ -162,9 +163,11 @@ export default function CertificateVerificationPage() {
                         {/* University Seal & Title */}
                         <div className="flex items-center gap-4 text-center sm:text-left">
                           <div className="p-2 bg-slate-50 border border-slate-300 rounded-xl shadow-sm flex-shrink-0">
-                            <img 
+                            <Image 
                               src="/images/logo.png" 
                               alt="Hope Theological University Logo" 
+                              width={80}
+                              height={80}
                               className="h-16 sm:h-20 w-auto object-contain"
                             />
                           </div>
