@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import Image from 'next/image';
 import { QRCodeSVG } from 'qrcode.react';
 import { Printer, Download, Share2, ArrowLeft, Award, Check, ShieldCheck, CheckCircle2, FileCheck2 } from 'lucide-react';
 
@@ -117,11 +116,9 @@ export default function StandaloneCertificatePage() {
                 {/* University Seal & Title */}
                 <div className="flex items-center gap-4 text-center sm:text-left">
                   <div className="p-2 bg-slate-50 border border-slate-300 rounded-xl shadow-sm flex-shrink-0">
-                    <Image 
+                    <img 
                       src="/images/logo.png" 
                       alt="Hope Theological University Logo" 
-                      width={80}
-                      height={80}
                       className="h-16 sm:h-20 w-auto object-contain"
                     />
                   </div>

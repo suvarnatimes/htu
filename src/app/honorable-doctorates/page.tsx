@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import { 
   Award, 
   CheckCircle2, 
@@ -25,7 +24,7 @@ export default function HonorableDoctoratesPage() {
       title: 'Chairman, Rashtra Christian Minority Corporation',
       degree: 'National Award of The Best Leadership (Honoris Causa)',
       citation: 'Conferred with the National Award of The Best Leadership (Honoris Causa) for the significant contribution to the Christian community and Humanity.',
-      image: '/images/dr-john-wesly.jpg',
+      image: 'https://htuindia.in/wp-content/uploads/2025/05/D1.jpg',
       field: 'Christian Leadership & Minority Welfare'
     },
     {
@@ -33,7 +32,7 @@ export default function HonorableDoctoratesPage() {
       title: 'Pulivendula Municipal Chairman, Andhra Pradesh - India',
       degree: 'Doctor of Best Social Service (Honoris Causa)',
       citation: 'Conferred with the Degree of Doctor of Best Social Service (Honoris Causa) for the exemplary contribution to the Nation and Humanity.',
-      image: '/images/dr-vallepu-varaprasad.jpg',
+      image: 'https://htuindia.in/wp-content/uploads/2025/05/D2.jpg',
       field: 'Civic Governance & Social Welfare'
     },
     {
@@ -41,7 +40,7 @@ export default function HonorableDoctoratesPage() {
       title: 'High Court Advocate of Andhra Pradesh',
       degree: 'Doctor of Philosophy (Thesis Causa)',
       citation: 'Conferred with the Degree of Doctor of Philosophy (Thesis Causa) for scholarly historical research into the History of Roman Catholic Church.',
-      image: '/images/dr-vempati-raghuram.jpg',
+      image: 'https://htuindia.in/wp-content/uploads/2025/05/D3.jpg',
       field: 'Legal Excellence & Ecclesiastical History'
     }
   ];
@@ -154,15 +153,12 @@ export default function HonorableDoctoratesPage() {
                 className="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-200 flex flex-col"
               >
                 <div className="relative h-64 bg-gray-100 overflow-hidden">
-                  <Image 
+                  <img 
                     src={aw.image} 
                     alt={aw.name} 
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover object-top hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
+                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute top-3 right-3 px-2.5 py-1 bg-[#0d2040]/90 backdrop-blur text-[#c59b27] text-[11px] font-bold rounded z-10">
+                  <div className="absolute top-3 right-3 px-2.5 py-1 bg-[#0d2040]/90 backdrop-blur text-[#c59b27] text-[11px] font-bold rounded">
                     Honoris Causa
                   </div>
                 </div>
@@ -214,14 +210,11 @@ export default function HonorableDoctoratesPage() {
             </div>
 
             <div className="lg:col-span-6">
-              <div className="rounded-xl overflow-hidden shadow-lg border-2 border-gray-200 relative h-72">
-                <Image 
-                  src="/images/doctorate-ceremony.jpg" 
+              <div className="rounded-xl overflow-hidden shadow-lg border-2 border-gray-200">
+                <img 
+                  src="https://htuindia.in/wp-content/uploads/slider/cache/647df817df2a64ad83446ae1a23d7fcd/KNS6385-1-scaled-1.jpg" 
                   alt="Doctorate Conferral Ceremony" 
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                  loading="lazy"
+                  className="w-full h-72 object-cover"
                 />
               </div>
             </div>

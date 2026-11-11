@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { SignedIn, SignedOut, SignIn, SignUp, UserButton, useUser, SignOutButton } from '@clerk/nextjs';
 import { 
   Search, Plus, Edit, Trash2, Download, Users, Award, 
-  ExternalLink, RefreshCw, X, ShieldCheck, CheckCircle2, Lock, LogOut, ShieldAlert
+  ExternalLink, RefreshCw, X, ShieldCheck, CheckCircle2, Lock, LogOut, ShieldAlert, Upload 
 } from 'lucide-react';
 
 const AUTHORIZED_ADMIN_EMAIL = 'hopetheologicaluniversity@gmail.com';
@@ -116,6 +116,67 @@ function AdminDashboard() {
     setModalMode('edit');
     setFormData({ ...student });
     setIsModalOpen(true);
+  };
+
+  const fileInputRef = React.useRef<HTMLInputElement | null>(null);
+  const [uploadingImage, setUploadingImage] = useState(false);
+
+  const handleImageFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setUploadingImage(true);
+    setStatusNotice(null);
+
+    const uploadData = new FormData();
+    uploadData.append('file', file);
+    if (formData.certNo) uploadData.append('certNo', formData.certNo);
+    if (formData.imageUrl) uploadData.append('oldImageUrl', formData.imageUrl);
+
+    try {
+      const res = await fetch('/api/admin/upload', {
+        method: 'POST',
+        body: uploadData
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setFormData(prev => ({ ...prev, imageUrl: data.imageUrl }));
+        setStatusNotice({ type: 'success', text: 'Photo uploaded to Cloudinary successfully!' });
+      } else {
+        setStatusNotice({ type: 'error', text: data.error || 'Failed to upload photo' });
+      }
+    } catch (err: any) {
+      setStatusNotice({ type: 'error', text: err.message || 'Upload connection failed' });
+    } finally {
+      setUploadingImage(false);
+      if (fileInputRef.current) fileInputRef.current.value = '';
+    }
+  };
+
+  const handleRemoveImage = async () => {
+    if (!formData.imageUrl) return;
+    if (!confirm('Are you sure you want to remove this photograph from Cloudinary and Turso database?')) return;
+
+    setUploadingImage(true);
+    setStatusNotice(null);
+
+    try {
+      const res = await fetch(
+        `/api/admin/upload?imageUrl=${encodeURIComponent(formData.imageUrl)}&certNo=${encodeURIComponent(formData.certNo)}`,
+        { method: 'DELETE' }
+      );
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setFormData(prev => ({ ...prev, imageUrl: '' }));
+        setStatusNotice({ type: 'success', text: 'Photo removed from Cloudinary and Turso successfully.' });
+      } else {
+        setFormData(prev => ({ ...prev, imageUrl: '' }));
+      }
+    } catch (err: any) {
+      setFormData(prev => ({ ...prev, imageUrl: '' }));
+    } finally {
+      setUploadingImage(false);
+    }
   };
 
   const handleSaveStudent = async (e: React.FormEvent) => {
@@ -514,15 +575,92 @@ function AdminDashboard() {
                 </div>
               </div>
 
-              <div>
-                <label className="block text-slate-400 mb-1 font-bold">Photo URL (Cloudinary or Image Link)</label>
-                <input
-                  type="text"
-                  value={formData.imageUrl}
-                  placeholder="https://res.cloudinary.com/hlrdvheu/..."
-                  onChange={(e) => setFormData({ ...formData, imageUrl: e.target.value })}
-                  className="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2 text-white font-mono"
-                />
+              {/* Candidate Photograph (Upload, Remove & Cloudinary Sync) */}
+              <div className="bg-slate-900/90 p-4 rounded-xl border border-slate-700 space-y-3">
+                <div className="flex items-center justify-between">
+                  <label className="block text-slate-300 font-bold text-sm">
+                    Candidate Photograph
+                  </label>
+                  {uploadingImage && (
+                    <span className="text-xs text-amber-400 animate-pulse flex items-center gap-1.5 font-medium">
+                      <RefreshCw className="w-3.5 h-3.5 animate-spin" /> Synchronizing Cloudinary...
+                    </span>
+                  )}
+                </div>
+
+                <div className="flex flex-col sm:flex-row items-center gap-4">
+                  {/* Photo Preview Thumbnail */}
+                  <div className="w-24 h-28 rounded-lg bg-slate-950 border-2 border-slate-700 overflow-hidden flex items-center justify-center flex-shrink-0 shadow-inner relative">
+                    {formData.imageUrl ? (
+                      <img 
+                        src={formData.imageUrl} 
+                        alt="Candidate Photo Preview" 
+                        className="w-full h-full object-cover object-top" 
+                      />
+                    ) : (
+                      <div className="text-center p-2 text-slate-500 text-[10px]">
+                        <Award className="w-8 h-8 mx-auto mb-1 opacity-40 text-slate-400" />
+                        No Photo
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Upload / Remove Actions */}
+                  <div className="flex-1 space-y-2 w-full">
+                    <div className="flex flex-wrap gap-2">
+                      <input 
+                        type="file" 
+                        ref={fileInputRef} 
+                        accept="image/*" 
+                        onChange={handleImageFileUpload} 
+                        className="hidden" 
+                      />
+                      <button
+                        type="button"
+                        disabled={uploadingImage}
+                        onClick={() => fileInputRef.current?.click()}
+                        className="px-3.5 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-xs font-bold flex items-center gap-1.5 shadow transition active:scale-95 disabled:opacity-50"
+                      >
+                        <Upload className="w-3.5 h-3.5" />
+                        {formData.imageUrl ? 'Upload & Replace Photo' : 'Upload Student Photo'}
+                      </button>
+
+                      {formData.imageUrl && (
+                        <button
+                          type="button"
+                          disabled={uploadingImage}
+                          onClick={handleRemoveImage}
+                          className="px-3.5 py-2 bg-red-700 hover:bg-red-600 text-white rounded-lg text-xs font-bold flex items-center gap-1.5 shadow transition active:scale-95 disabled:opacity-50"
+                        >
+                          <Trash2 className="w-3.5 h-3.5" />
+                          Remove Photo
+                        </button>
+                      )}
+                    </div>
+                    <p className="text-[11px] text-slate-400 leading-relaxed">
+                      Choose an image file from your device. Automatically uploads to Cloudinary and saves into Turso database.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Direct image URL input for manual overrides */}
+                <div className="pt-2 border-t border-slate-800">
+                  <div className="flex items-center justify-between text-[11px] text-slate-400 mb-1">
+                    <span>Direct Image Link (Cloudinary / CDN):</span>
+                    {formData.imageUrl && (
+                      <a href={formData.imageUrl} target="_blank" rel="noreferrer" className="text-amber-400 hover:underline flex items-center gap-1">
+                        View Full Image <ExternalLink className="w-3 h-3" />
+                      </a>
+                    )}
+                  </div>
+                  <input
+                    type="text"
+                    value={formData.imageUrl}
+                    placeholder="https://res.cloudinary.com/..."
+                    onChange={(e) => setFormData({ ...formData, imageUrl: e.target.value })}
+                    className="w-full bg-slate-950 border border-slate-800 rounded px-3 py-1.5 text-xs text-slate-300 font-mono"
+                  />
+                </div>
               </div>
 
               <div className="pt-4 border-t border-slate-700 flex justify-end gap-2">

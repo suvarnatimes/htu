@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import { 
   BookOpen, 
   Award, 
@@ -10,11 +9,11 @@ import {
   Users, 
   Globe2, 
   ChevronRight, 
-  ChevronLeft, 
+  ChevronLeft,
   CheckCircle, 
   Calendar, 
-  Sparkles, 
-  ArrowRight 
+  Sparkles,
+  ArrowRight
 } from 'lucide-react';
 
 export default function HomePage() {
@@ -22,19 +21,19 @@ export default function HomePage() {
 
   const slides = [
     {
-      image: '/images/convocation-hero.jpg',
+      image: 'https://htuindia.in/wp-content/uploads/slider/cache/647df817df2a64ad83446ae1a23d7fcd/KNS6385-1-scaled-1.jpg',
       title: 'Hope Theological University Welcomes You',
       subtitle: 'Inaugurated in 2019 to train young men and women for transformative leadership ministry in the Church and society.',
       tag: 'Academic Convocation & Leadership'
     },
     {
-      image: '/images/theology-students.jpg',
+      image: 'https://htuindia.in/wp-content/uploads/slider/cache/4ba8a65d802c77aef252d2ed23b2109a/FB_IMG_1712246159989-1.jpg',
       title: 'Distance & Online Biblical Education',
       subtitle: 'Earn your Diploma, Bachelor, Master, and Doctorate from the comfort of your own home or local study center.',
       tag: 'Flexible Learning Anywhere'
     },
     {
-      image: '/images/doctorate-ceremony.jpg',
+      image: 'https://htuindia.in/wp-content/uploads/slider/cache/ab4e81a840c30cea1dd0b2baa5cd3226/FB_IMG_1712246045227-1.jpg',
       title: 'Honoring Global Servant Leaders',
       subtitle: 'Conferring Honorary Doctorates (Honoris Causa) to individuals who have made exemplary contributions to faith and humanity.',
       tag: 'Recognizing Lifelong Dedication'
@@ -59,13 +58,10 @@ export default function HomePage() {
               index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
             }`}
           >
-            <Image
+            <img
               src={slide.image}
               alt={slide.title}
-              fill
-              priority={index === 0}
-              sizes="100vw"
-              className="object-cover object-center brightness-75 scale-105 transition-transform duration-7000 ease-out"
+              className="w-full h-full object-cover object-center brightness-75 scale-105 transition-transform duration-7000 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0d2040]/95 via-[#0d2040]/60 to-transparent" />
             <div className="absolute inset-0 flex items-center">
@@ -187,16 +183,11 @@ export default function HomePage() {
 
             <div className="lg:col-span-5">
               <div className="relative rounded-lg overflow-hidden shadow-xl border-4 border-white bg-white">
-                <div className="relative w-full h-80">
-                  <Image
-                    src="/images/pastors-bishops-assembly.jpg"
-                    alt="Students and pastoral leadership assembly"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 40vw"
-                    className="object-cover"
-                    loading="lazy"
-                  />
-                </div>
+                <img
+                  src="https://htuindia.in/wp-content/uploads/slider/cache/4ba8a65d802c77aef252d2ed23b2109a/FB_IMG_1712246159989-1.jpg"
+                  alt="Students studying theology"
+                  className="w-full h-80 object-cover"
+                />
                 <div className="p-5 bg-white border-t border-gray-100">
                   <h4 className="font-serif font-bold text-[#0d2040] text-base">Biblical & Theological Rigor</h4>
                   <p className="text-xs text-gray-600 mt-1">
@@ -320,8 +311,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Honoree 1 */}
             <div className="bg-[#142d54] rounded-lg p-5 border border-gray-700 flex flex-col items-center text-center">
-              <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-[#c59b27] mb-4 shadow">
-                <Image src="/images/dr-john-wesly.jpg" alt="Dr. BOLLAVARAPU JOHN WESLY" fill sizes="96px" className="object-cover" loading="lazy" />
+              <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-[#c59b27] mb-4 shadow">
+                <img src="https://htuindia.in/wp-content/uploads/2025/05/D1.jpg" alt="Dr. BOLLAVARAPU JOHN WESLY" className="w-full h-full object-cover" />
               </div>
               <h3 className="font-serif font-bold text-base text-white">Dr. BOLLAVARAPU JOHN WESLY</h3>
               <p className="text-xs text-[#c59b27] mt-1 font-medium">Chairman, Rashtra Christian Minority Corporation</p>
@@ -332,8 +323,8 @@ export default function HomePage() {
 
             {/* Honoree 2 */}
             <div className="bg-[#142d54] rounded-lg p-5 border border-gray-700 flex flex-col items-center text-center">
-              <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-[#c59b27] mb-4 shadow">
-                <Image src="/images/dr-vallepu-varaprasad.jpg" alt="Dr. VALLEPU VARAPRASAD" fill sizes="96px" className="object-cover" loading="lazy" />
+              <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-[#c59b27] mb-4 shadow">
+                <img src="https://htuindia.in/wp-content/uploads/2025/05/D2.jpg" alt="Dr. VALLEPU VARAPRASAD" className="w-full h-full object-cover" />
               </div>
               <h3 className="font-serif font-bold text-base text-white">Dr. VALLEPU VARAPRASAD</h3>
               <p className="text-xs text-[#c59b27] mt-1 font-medium">Pulivendula Municipal Chairman, Andhra Pradesh</p>
@@ -344,8 +335,8 @@ export default function HomePage() {
 
             {/* Honoree 3 */}
             <div className="bg-[#142d54] rounded-lg p-5 border border-gray-700 flex flex-col items-center text-center">
-              <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-[#c59b27] mb-4 shadow">
-                <Image src="/images/dr-vempati-raghuram.jpg" alt="Dr. VEMPATI RAGHURAM" fill sizes="96px" className="object-cover" loading="lazy" />
+              <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-[#c59b27] mb-4 shadow">
+                <img src="https://htuindia.in/wp-content/uploads/2025/05/D3.jpg" alt="Dr. VEMPATI RAGHURAM" className="w-full h-full object-cover" />
               </div>
               <h3 className="font-serif font-bold text-base text-white">Dr. VEMPATI RAGHURAM</h3>
               <p className="text-xs text-[#c59b27] mt-1 font-medium">High Court Advocate of Andhra Pradesh</p>
