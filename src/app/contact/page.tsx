@@ -114,8 +114,8 @@ export default function ContactPage() {
                   <Phone className="w-4 h-4 text-[#c59b27] flex-shrink-0" />
                   <div>
                     <span className="block text-[11px] text-gray-400">Phone / WhatsApp:</span>
-                    <a href="tel:9492157339" className="font-semibold text-white hover:text-[#c59b27] transition">
-                      9492157339
+                    <a href="tel:+919492157339" className="font-semibold text-white hover:text-[#c59b27] transition">
+                      +91 94921 57339
                     </a>
                   </div>
                 </div>

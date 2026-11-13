@@ -49,9 +49,9 @@ export default function Header() {
         <div className="bg-[#0d2040] text-gray-200 text-xs py-1.5 px-4 border-b border-[#c59b27]/30">
           <div className="max-w-7xl mx-auto flex justify-between items-center gap-2">
             <div className="flex items-center gap-6">
-              <a href="tel:+919491626233" className="flex items-center gap-1.5 hover:text-amber-300 transition-colors">
+              <a href="tel:+919492157339" className="flex items-center gap-1.5 hover:text-amber-300 transition-colors">
                 <Phone className="w-3.5 h-3.5 text-[#c59b27]" /> 
-                <span>+91 94916 26233</span>
+                <span>+91 94921 57339</span>
               </a>
               <a href="mailto:hopetheologicaluniversity@gmail.com" className="flex items-center gap-1.5 hover:text-amber-300 transition-colors">
                 <Mail className="w-3.5 h-3.5 text-[#c59b27]" /> 
@@ -153,11 +153,11 @@ export default function Header() {
         <div className="bg-[#0d2040] text-gray-200 text-[10px] sm:text-[11px] py-1 border-b border-[#c59b27]/30">
           <div className="max-w-7xl mx-auto px-3 sm:px-6 flex justify-between items-center gap-2">
             <a 
-              href="tel:+919491626233" 
+              href="tel:+919492157339" 
               className="flex items-center gap-1 text-gray-200 hover:text-amber-300 transition-colors whitespace-nowrap"
             >
               <Phone className="w-3 h-3 text-[#c59b27] flex-shrink-0" /> 
-              <span>+91 94916 26233</span>
+              <span>+91 94921 57339</span>
             </a>
 
             <Link 
