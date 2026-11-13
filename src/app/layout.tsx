@@ -5,9 +5,9 @@ import Footer from '@/components/Footer';
 import { ClerkProvider } from '@clerk/nextjs';
 
 export const metadata: Metadata = {
-  title: 'Hope Theological University | Online Biblical & Theological Education',
-  description: 'Hope Theological University (HTU India) offers distance and online Biblical, Theological and Doctoral degree programs. Associate Member of Cathedral Episcopal Synod Bishop\'s Council.',
-  keywords: 'Hope Theological University, HTU India, Theological University, Distance Bible Education, Honorary Doctorate, Bachelor of Theology, Master of Divinity',
+  title: 'HOPE THEOLOGICAL UNIVERSITY | Distance & Online Biblical Education',
+  description: 'Hope Theological University - We Are A Leading University That Offers Distance And Online Biblical and Theological Education. A University of Synodos of Jesus Agape Diocese of India International Episcopal Association. ISO: INTERNATIONAL QUALITY CERTIFICATION SERVICE UK.',
+  keywords: 'Hope Theological University, HTU India, Theological University, Distance Bible Education, Synodos of Jesus Agape Diocese, ISO UK Certification, Honorary Doctorate, Bachelor of Theology, Master of Divinity',
 };
 
 export default function RootLayout({

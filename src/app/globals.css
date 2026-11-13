@@ -7,11 +7,15 @@
   --gold: #c59b27;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   color: #1a202c;
   background-color: #ffffff;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  overflow-x: hidden;
 }
 
 .gold-gradient {
@@ -21,3 +25,19 @@ body {
 .navy-gradient {
   background: linear-gradient(135deg, #0d2040 0%, #1a365d 100%);
 }
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+

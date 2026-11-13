@@ -199,12 +199,12 @@ export default function HonorableDoctoratesPage() {
               <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#0d2040]">
                 Honorary Degrees at Hope Theological University
               </h2>
-              <div className="prose text-gray-700 text-sm leading-relaxed space-y-3">
+              <div className="prose text-gray-700 text-sm sm:text-base leading-relaxed space-y-3">
                 <p>
-                  The Honorary Degree is known by the ancient Latin phrases <em>honoris causa</em> ("for the sake of the honor") or <em>ad honorem</em> ("to the honor"). The degree is typically a Doctorate and is awarded to individuals who have made significant contributions to the cultural, spiritual, educational, or social development of the State, Nation, or world.
+                  <strong>An Honorary Doctorate (Doctor Honours course)</strong> is an honorary academic degree centric to those who have made a major contribution to the advancement of scholarship, science or culture or who have otherwise contributed to the benefit of mankind.
                 </p>
                 <p>
-                  Unlike standard earned degrees which focus on structured academic coursework, an Honorary Doctorate is conferred in recognition of sustained, high-impact life work, spiritual pioneering, and humanitarian self-sacrifice.
+                  Degrees awarded by Hope Theological University are based on work and life experience certificates, with International Standards, with an intention to equip and empower people irrespective of age, caste, creed and religion.
                 </p>
               </div>
             </div>

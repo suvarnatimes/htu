@@ -94,24 +94,38 @@ export default function Footer() {
           {/* Column 3: Academic Programs */}
           <div>
             <h4 className="text-base font-serif font-bold text-white mb-4 uppercase tracking-wider border-l-4 border-[#c59b27] pl-2.5">
-              Theological Degrees
+              Academic Programs
             </h4>
-            <ul className="space-y-2.5 text-xs text-gray-300">
-              <li className="pb-2 border-b border-gray-800">
-                <span className="font-semibold text-white block">Bachelor of Theology (BTh)</span>
-                <span className="text-[11px] text-gray-400">Standard Biblical & Ministerial studies</span>
+            <ul className="space-y-2 text-xs text-gray-300">
+              <li className="pb-1.5 border-b border-gray-800">
+                <a href="/courses" className="hover:text-[#c59b27] transition">
+                  <span className="font-semibold text-white block">Bachelor Degrees</span>
+                  <span className="text-[11px] text-gray-400">BTh., BVle., BD.</span>
+                </a>
               </li>
-              <li className="pb-2 border-b border-gray-800">
-                <span className="font-semibold text-white block">Master of Theology (MTh)</span>
-                <span className="text-[11px] text-gray-400">Advanced pastoral theology & leadership</span>
+              <li className="pb-1.5 border-b border-gray-800">
+                <a href="/courses" className="hover:text-[#c59b27] transition">
+                  <span className="font-semibold text-white block">Master Degrees</span>
+                  <span className="text-[11px] text-gray-400">MTh., MDK., MMR.</span>
+                </a>
               </li>
-              <li className="pb-2 border-b border-gray-800">
-                <span className="font-semibold text-white block">Doctor of Philosophy (Ph.D.)</span>
-                <span className="text-[11px] text-gray-400">Theology, Counseling & Biblical Research</span>
+              <li className="pb-1.5 border-b border-gray-800">
+                <a href="/courses" className="hover:text-[#c59b27] transition">
+                  <span className="font-semibold text-white block">Doctor Degrees</span>
+                  <span className="text-[11px] text-gray-400">Ph.D., Do., DVle.</span>
+                </a>
+              </li>
+              <li className="pb-1.5 border-b border-gray-800">
+                <a href="/courses" className="hover:text-[#c59b27] transition">
+                  <span className="font-semibold text-white block">Doctor Of Philosophy</span>
+                  <span className="text-[11px] text-gray-400">Theology, Counseling, Writing &amp; Biblical Studies</span>
+                </a>
               </li>
               <li className="pt-1">
-                <span className="font-semibold text-[#c59b27] block">Honorary Doctorates (Honoris Causa)</span>
-                <span className="text-[11px] text-gray-400">Honoring lifelong spiritual & humanitarian service</span>
+                <a href="/honorable-doctorates" className="hover:text-[#c59b27] transition">
+                  <span className="font-semibold text-[#c59b27] block">Honorary Doctorate</span>
+                  <span className="text-[11px] text-gray-400">Doctor Honours course</span>
+                </a>
               </li>
             </ul>
           </div>
@@ -148,9 +162,12 @@ export default function Footer() {
                   hopetheologicaluniversity@gmail.com
                 </a>
               </div>
-              <div className="pt-2">
-                <div className="inline-block bg-[#142d54] text-[#c59b27] text-[11px] px-3 py-1.5 rounded border border-[#c59b27]/30">
-                  Episcopal Synod Bishop's Council Affiliation
+              <div className="pt-2 space-y-1.5">
+                <div className="block bg-[#142d54] text-[#c59b27] text-[11px] px-3 py-1.5 rounded border border-[#c59b27]/30">
+                  Synodos of Jesus Agape Diocese of India International Episcopal Association
+                </div>
+                <div className="block bg-[#142d54] text-gray-200 text-[10px] font-semibold px-3 py-1 rounded border border-gray-700">
+                  ISO: INTERNATIONAL QUALITY CERTIFICATION SERVICE UK
                 </div>
               </div>
             </div>

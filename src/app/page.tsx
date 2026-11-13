@@ -10,10 +10,14 @@ import {
   Globe2, 
   ChevronRight, 
   ChevronLeft,
-  CheckCircle, 
-  Calendar, 
+  CheckCircle2, 
   Sparkles,
-  ArrowRight
+  ArrowRight,
+  Heart,
+  Target,
+  Scroll,
+  Flame,
+  CheckCircle
 } from 'lucide-react';
 
 export default function HomePage() {
@@ -22,21 +26,21 @@ export default function HomePage() {
   const slides = [
     {
       image: 'https://htuindia.in/wp-content/uploads/slider/cache/647df817df2a64ad83446ae1a23d7fcd/KNS6385-1-scaled-1.jpg',
-      title: 'Hope Theological University Welcomes You',
-      subtitle: 'Inaugurated in 2019 to train young men and women for transformative leadership ministry in the Church and society.',
-      tag: 'Academic Convocation & Leadership'
+      title: 'Hope Theological University',
+      subtitle: 'A comprehensive Christ-Centered worldview Christian University established with Mission to produce Biblical sound Leaders who would impact the Church and community globally.',
+      tag: 'Christ-Centered Education'
     },
     {
       image: 'https://htuindia.in/wp-content/uploads/slider/cache/4ba8a65d802c77aef252d2ed23b2109a/FB_IMG_1712246159989-1.jpg',
-      title: 'Distance & Online Biblical Education',
-      subtitle: 'Earn your Diploma, Bachelor, Master, and Doctorate from the comfort of your own home or local study center.',
-      tag: 'Flexible Learning Anywhere'
+      title: 'Biblical & Theological Degree Programs',
+      subtitle: 'Offering programs from Undergraduate to Doctoral level. Earn your degree from the comfort of your own home, place, or any HTU study centre.',
+      tag: 'Undergraduate to Doctoral Level'
     },
     {
       image: 'https://htuindia.in/wp-content/uploads/slider/cache/ab4e81a840c30cea1dd0b2baa5cd3226/FB_IMG_1712246045227-1.jpg',
-      title: 'Honoring Global Servant Leaders',
-      subtitle: 'Conferring Honorary Doctorates (Honoris Causa) to individuals who have made exemplary contributions to faith and humanity.',
-      tag: 'Recognizing Lifelong Dedication'
+      title: 'Equipping & Empowering Believers',
+      subtitle: 'Degrees awarded with International Standards to prepare students for a variety of occupations and voluntary roles within the Christian faith.',
+      tag: 'Impact Church & Community'
     }
   ];
 
@@ -47,10 +51,107 @@ export default function HomePage() {
     return () => clearInterval(timer);
   }, [slides.length]);
 
+  const principles = [
+    'Joint research projects',
+    'General Meetings of representatives of educational institutions of the Association',
+    'Professional communities of leaders, teachers, staff and students of theological Colleges',
+    'Joint representation of the interests of theological universities'
+  ];
+
+  const confessionArticles = [
+    {
+      num: '01',
+      title: 'Infallible Authority of Scripture',
+      text: 'We believe that the canonical scriptures are the infallible inspired Word of God, by perfect the Revelation of God’s will of people to save. The books of the Bible are the only highest authority in all matters of the Christian faith and life.'
+    },
+    {
+      num: '02',
+      title: 'The One Creator God',
+      text: 'We believe in the one Creator God, absolutely perfect and eternally existing in three persons: the Father and the Son and the Holy Spirit.'
+    },
+    {
+      num: '03',
+      title: 'Jesus Christ: True God and True Man',
+      text: 'We believe that Jesus Christ – true God and true man. He was conceived by the Holy Spirit and born of the virgin Mary. He died on the cross, offering Himself as a sacrifice for our sins. He rose from the dead, ascended into heaven and is seated at the right hand of the Father, as our High Priest and Advocate.'
+    },
+    {
+      num: '04',
+      title: 'Ministry of the Holy Spirit',
+      text: 'We believe that the Holy Spirit glorifies the Lord Jesus Christ, convicts men of sin, restores them to a new life, dwells in them, and takes strength for godly living and service.'
+    },
+    {
+      num: '05',
+      title: 'Creation, Fall, and Regeneration',
+      text: 'We believe that man was created in the image of God, but fell into sin and spiritually died. He can be reborn for salvation and spiritual life only through the action of the Holy Spirit and the Word of God.'
+    },
+    {
+      num: '06',
+      title: 'Salvation by Christ\'s Blood & Resurrection',
+      text: 'We believe that the blood shed by Jesus Christ and resurrection of a His is the only foundation for the salvation of all people. Having repented of their sins and by faith who have accepted Jesus Christ as Lord, they are born of the Holy Spirit and become children of God.'
+    },
+    {
+      num: '07',
+      title: 'Water Baptism & the Lord’s Supper',
+      text: 'We believe that Water Baptism and the Lord’s Supper are the commandments of the Lord That are Kept by the Church. However, without saving faith, they do not provide salvation.'
+    },
+    {
+      num: '08',
+      title: 'The True Church as the Body of Christ',
+      text: 'We believe that the Church is made of people of all Times and all nations, regenerated by the Holy Spirit through faith in Jesus Christ and united in the Body of Christ.'
+    },
+    {
+      num: '09',
+      title: 'Christ as Head of the Church',
+      text: 'We believe that Jesus Christ is Our Lord and Head of the Church and that every local church is under His Guidance.'
+    },
+    {
+      num: '10',
+      title: 'The Second Coming of Jesus Christ',
+      text: 'We believe in the second coming of Jesus Christ, who will appear for the rapture of the Church and the judgment of the living and the dead.'
+    },
+    {
+      num: '11',
+      title: 'Bodily Resurrection and Judgment',
+      text: 'We believe in bodily resurrection from the dead: for believers, to glory, eternal bliss and joy; for unbelievers – for condemnation and everlasting torment.'
+    },
+    {
+      num: '12',
+      title: 'The Great Commission',
+      text: 'We believe in the Need to Fulfill the great Commission of Our Lord Jesus Christ – Matthew 28.19-20. AMEN, AMEN, AMEN.'
+    }
+  ];
+
+  const statementOfFaith = [
+    'To help the educational institutions to achieve international standards',
+    'To confirm their academic and spiritual level recognized in the world by accreditation',
+    'Combine specialists in theological education',
+    'Provide programs, books, advice and other professional support',
+    'To develop the evangelical theology',
+    'Form an academic and research culture',
+    'To provide researchers with methodological and resource support'
+  ];
+
+  const basicValues = [
+    'We value the ministry and worship of God to the Father, the Son, and the Holy Spirit.',
+    'We value the spread of the Gospel in all available ways, with the involvement of every member of the Church.',
+    'We value education as the process of forming an integral personality for the ministry of Christ in the church, the world, and the academic community.',
+    'We value research aimed at comprehending the works of God in the world, the church, society and the individual, with the aim of applying its results to the spread of the Kingdom of God.',
+    'We value the partnership of the members of the Body of Christ for the growth of oneself in love.'
+  ];
+
+  const practicalValues = [
+    'We value theological education as a tool to help the Church fulfill its mission.',
+    'We value the partnership of educational institutions and their mutual help to each other.',
+    'We value the quality of theological education in the training of ministers and all members of the church.',
+    'We value professional development and growth in order to achieve a more complete realization of the gifts, talents and abilities of each.',
+    'We value theology that serves the development of evangelical churches.',
+    'We value theological studies carried out at a high academic level and of practical value.'
+  ];
+
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-white">
       {/* Hero Carousel Section */}
-      <section className="relative w-full h-[500px] sm:h-[580px] bg-slate-900 overflow-hidden text-white">
+      <section className="relative w-full h-[520px] sm:h-[600px] bg-slate-900 overflow-hidden text-white">
         {slides.map((slide, index) => (
           <div
             key={index}
@@ -63,17 +164,17 @@ export default function HomePage() {
               alt={slide.title}
               className="w-full h-full object-cover object-center brightness-75 scale-105 transition-transform duration-7000 ease-out"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0d2040]/95 via-[#0d2040]/60 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0d2040]/95 via-[#0d2040]/65 to-transparent" />
             <div className="absolute inset-0 flex items-center">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full">
-                <div className="max-w-2xl">
+                <div className="max-w-3xl">
                   <span className="inline-block py-1 px-3 bg-[#c59b27] text-[#0d2040] font-bold text-xs uppercase tracking-wider rounded mb-3 shadow">
                     {slide.tag}
                   </span>
                   <h1 className="text-3xl sm:text-5xl font-serif font-bold text-white leading-tight drop-shadow-md">
                     {slide.title}
                   </h1>
-                  <p className="mt-4 text-base sm:text-lg text-gray-200 leading-relaxed font-sans max-w-xl drop-shadow">
+                  <p className="mt-4 text-base sm:text-lg text-gray-200 leading-relaxed font-sans max-w-2xl drop-shadow">
                     {slide.subtitle}
                   </p>
                   <div className="mt-6 flex flex-wrap gap-4">
@@ -85,10 +186,10 @@ export default function HomePage() {
                       <ArrowRight className="w-4 h-4" />
                     </a>
                     <a
-                      href="/about"
+                      href="#about-section"
                       className="px-6 py-3 bg-white/20 hover:bg-white/30 text-white font-semibold text-xs sm:text-sm uppercase tracking-wider rounded backdrop-blur border border-white/40 transition"
                     >
-                      Read Our Story
+                      Learn More
                     </a>
                   </div>
                 </div>
@@ -128,55 +229,52 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Quick Stats Banner */}
+      {/* Quick Stats / Highlights Banner */}
       <section className="bg-[#0d2040] text-white py-6 border-b-2 border-[#c59b27]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div className="border-r border-gray-700 last:border-none pr-4">
-              <div className="text-2xl sm:text-3xl font-serif font-bold text-[#c59b27]">2019</div>
-              <div className="text-xs text-gray-300 uppercase tracking-wider mt-1">Established Year</div>
+              <div className="text-xl sm:text-2xl font-serif font-bold text-[#c59b27]">Christ-Centered</div>
+              <div className="text-xs text-gray-300 uppercase tracking-wider mt-1">Worldview Education</div>
             </div>
             <div className="border-r border-gray-700 last:border-none pr-4">
-              <div className="text-2xl sm:text-3xl font-serif font-bold text-[#c59b27]">100%</div>
-              <div className="text-xs text-gray-300 uppercase tracking-wider mt-1">Distance & Online</div>
+              <div className="text-xl sm:text-2xl font-serif font-bold text-[#c59b27]">UG to Doctoral</div>
+              <div className="text-xs text-gray-300 uppercase tracking-wider mt-1">Biblical &amp; Theological</div>
             </div>
             <div className="border-r border-gray-700 last:border-none pr-4">
-              <div className="text-2xl sm:text-3xl font-serif font-bold text-[#c59b27]">30+</div>
-              <div className="text-xs text-gray-300 uppercase tracking-wider mt-1">Theological Programs</div>
+              <div className="text-xl sm:text-2xl font-serif font-bold text-[#c59b27]">Online &amp; Centers</div>
+              <div className="text-xs text-gray-300 uppercase tracking-wider mt-1">Flexible Degree Study</div>
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl font-serif font-bold text-[#c59b27]">Synod</div>
-              <div className="text-xs text-gray-300 uppercase tracking-wider mt-1">Episcopal Affiliation</div>
+              <div className="text-xl sm:text-2xl font-serif font-bold text-[#c59b27]">Global Impact</div>
+              <div className="text-xs text-gray-300 uppercase tracking-wider mt-1">Equip &amp; Empower</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Welcome & Founder Story Section */}
-      <section className="py-16 bg-[#fbfaf6]">
+      {/* Welcome Section: Hope Theological University Welcomes You */}
+      <section className="py-16 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-7 space-y-5">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-100 border border-[#c59b27]/30 rounded-full text-xs font-semibold text-[#0d2040]">
                 <Sparkles className="w-3.5 h-3.5 text-[#c59b27]" />
-                <span>Foundational Legacy</span>
+                <span>Foundational Beginning</span>
               </div>
               <h2 className="text-2xl sm:text-4xl font-serif font-bold text-[#0d2040] leading-snug">
                 Hope Theological University Welcomes You
               </h2>
               <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-                In 2019, <strong>Dr. Davidpaul Arjilli</strong> and a group of pastors and elders inaugurated <strong>Hope Theological University</strong> to train young men and women to enter leadership ministry in the Church. Most of the current pastors and elders of the local churches are getting up in years, and finding young people to follow after them has been challenging.
+                In 2019, Dr. Davidpaul Arjilli and a group of pastors and elders inaugurated Hope Theological University to train young men and women to enter leadership ministry in the Church. Most of the current pastors and elders of the local churches are getting up in years, and finding young people to follow after them has been challenging.
               </p>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                HTU was founded to bridge this vital generational gap, providing rigorous Biblical foundation, pastoral mentorship, and accessible distance education so students across India and abroad can answer God's calling without leaving their ministry or families.
-              </p>
-              <div className="pt-2 flex flex-wrap gap-4">
+              <div className="pt-2">
                 <a
                   href="/about"
-                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#0d2040] hover:text-[#c59b27] transition"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#0d2040] hover:bg-[#142d54] text-[#c59b27] hover:text-white font-bold text-xs uppercase tracking-wider rounded shadow transition"
                 >
-                  <span>Read Full About HTU</span>
-                  <ChevronRight className="w-4 h-4 text-[#c59b27]" />
+                  <span>READ MORE</span>
+                  <ChevronRight className="w-4 h-4" />
                 </a>
               </div>
             </div>
@@ -184,14 +282,14 @@ export default function HomePage() {
             <div className="lg:col-span-5">
               <div className="relative rounded-lg overflow-hidden shadow-xl border-4 border-white bg-white">
                 <img
-                  src="https://htuindia.in/wp-content/uploads/slider/cache/4ba8a65d802c77aef252d2ed23b2109a/FB_IMG_1712246159989-1.jpg"
-                  alt="Students studying theology"
+                  src="/images/pastors-bishops-assembly.jpg"
+                  alt="Hope Theological University Pastors and Elders"
                   className="w-full h-80 object-cover"
                 />
                 <div className="p-5 bg-white border-t border-gray-100">
-                  <h4 className="font-serif font-bold text-[#0d2040] text-base">Biblical & Theological Rigor</h4>
+                  <h4 className="font-serif font-bold text-[#0d2040] text-base">Inaugurated in 2019</h4>
                   <p className="text-xs text-gray-600 mt-1">
-                    Equipping believers with sound doctrine, practical counseling, and pastoral leadership for the contemporary world.
+                    Training young men and women for transformative leadership ministry in the Church.
                   </p>
                 </div>
               </div>
@@ -200,165 +298,358 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Core Highlights: 3 Pillar Cards */}
-      <section className="py-16 bg-white">
+      {/* ACCREDITATION Section */}
+      <section className="py-10 bg-[#0d2040] text-white border-b-2 border-[#c59b27] relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#0d2040]">
-              Our Foundation & Calling
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-start sm:items-center gap-4">
+              <div className="w-14 h-14 rounded-xl bg-[#142d54] border border-[#c59b27] flex items-center justify-center flex-shrink-0 text-[#c59b27] shadow">
+                <ShieldCheck className="w-8 h-8" />
+              </div>
+              <div>
+                <span className="text-xs uppercase font-bold tracking-widest text-[#c59b27]">
+                  Official Recognition
+                </span>
+                <h3 className="text-xl sm:text-2xl font-serif font-bold text-white mt-0.5">
+                  ACCREDITATION
+                </h3>
+                <p className="text-xs sm:text-sm text-gray-200 mt-1 max-w-3xl leading-relaxed">
+                  Hope Theological University is Associate Member, Affiliated and Interdenominational Cathedral Episcopal Synod Bishop&apos;s Council.
+                </p>
+              </div>
+            </div>
+            <div className="flex-shrink-0 w-full sm:w-auto text-left sm:text-right">
+              <a
+                href="/accreditation"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#c59b27] hover:bg-[#d6aa32] text-[#0d2040] font-bold text-xs uppercase tracking-wider rounded shadow transition"
+              >
+                <span>Learn More</span>
+                <ChevronRight className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 1: WHAT IS THE HOPE THEOLOGICAL UNIVERSITY ? */}
+      <section id="about-section" className="py-16 bg-[#fbfaf6]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-7 space-y-5">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-100 border border-[#c59b27]/30 rounded-full text-xs font-semibold text-[#0d2040]">
+                <Sparkles className="w-3.5 h-3.5 text-[#c59b27]" />
+                <span>About HTU</span>
+              </div>
+              <h2 className="text-2xl sm:text-4xl font-serif font-bold text-[#0d2040] leading-snug">
+                WHAT IS THE HOPE THEOLOGICAL UNIVERSITY ?
+              </h2>
+              <div className="space-y-4 text-sm sm:text-base text-gray-700 leading-relaxed">
+                <p>
+                  <strong>HOPE THEOLOGICAL UNIVERSITY</strong> is an comprehensive Christ- Centered worldview Christian University. Its established with Mission to produce Biblical sound Leaders who would impact the Church and community globally.
+                </p>
+                <p>
+                  Hope Theological University is offering Biblical and Theological degree programs from Undergraduate to Doctoral level. you are privileged with the opportunity to earn your degree from the comfort of your own home or place or in any one of HTU study centres.
+                </p>
+                <p>
+                  We believe that our program of study and resultant degrees represent solid and appropriate education for anyone called to study for the ministry, enhance their Bible knowledge and ministry or learn about many more topics relevant to Christian today. Our programs are intended to prepare students for a variety of occupations and voluntary roles within the Christian faith, please apply today to advance your career with Hope Theological University..
+                </p>
+              </div>
+              <div className="pt-2 flex flex-wrap gap-4">
+                <a
+                  href="/courses"
+                  className="px-6 py-3 bg-[#c59b27] hover:bg-[#d6aa32] text-[#0d2040] font-bold text-xs uppercase tracking-wider rounded shadow transition flex items-center gap-2"
+                >
+                  <span>Apply Today / View Programs</span>
+                  <ChevronRight className="w-4 h-4" />
+                </a>
+                <a
+                  href="/contact"
+                  className="px-6 py-3 bg-[#0d2040] hover:bg-[#142d54] text-white font-semibold text-xs uppercase tracking-wider rounded shadow transition"
+                >
+                  Contact Admissions
+                </a>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5">
+              <div className="relative rounded-lg overflow-hidden shadow-xl border-4 border-white bg-white">
+                <img
+                  src="https://htuindia.in/wp-content/uploads/slider/cache/4ba8a65d802c77aef252d2ed23b2109a/FB_IMG_1712246159989-1.jpg"
+                  alt="Hope Theological University students and leaders"
+                  className="w-full h-80 object-cover"
+                />
+                <div className="p-5 bg-white border-t border-gray-100">
+                  <h4 className="font-serif font-bold text-[#0d2040] text-base">Christ-Centered Worldview</h4>
+                  <p className="text-xs text-gray-600 mt-1">
+                    Equipping Biblical sound Leaders who would impact the Church and community globally.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 2: PRINCIPLES OF Hope Theological University */}
+      <section className="py-16 bg-white border-t border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#c59b27]">
+              Institutional Pillars
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#0d2040] mt-1">
+              PRINCIPLES OF Hope Theological University
             </h2>
             <div className="w-16 h-1 bg-[#c59b27] mx-auto mt-3 mb-4 rounded" />
             <p className="text-xs sm:text-sm text-gray-600">
-              A comprehensive Christ-centered university empowering ministers, professionals, and community leaders through accredited theological education.
+              Guiding our collective mission in theological excellence, academic collaboration, and community representation.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Card 1: Accreditation */}
-            <div className="bg-[#fbfaf6] p-7 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition group flex flex-col justify-between">
-              <div>
-                <div className="w-12 h-12 rounded-lg bg-[#0d2040] text-[#c59b27] flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
-                  <ShieldCheck className="w-6 h-6" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {principles.map((principle, index) => (
+              <div
+                key={index}
+                className="bg-[#fbfaf6] p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition flex flex-col justify-between"
+              >
+                <div>
+                  <div className="w-10 h-10 rounded-lg bg-[#0d2040] text-[#c59b27] flex items-center justify-center mb-4 font-serif font-bold text-sm">
+                    0{index + 1}
+                  </div>
+                  <h3 className="font-serif font-semibold text-sm sm:text-base text-[#0d2040] leading-snug">
+                    {principle}
+                  </h3>
                 </div>
-                <h3 className="text-lg font-serif font-bold text-[#0d2040] mb-3">
-                  ACCREDITATION
-                </h3>
-                <p className="text-xs text-gray-600 leading-relaxed">
-                  Hope Theological University is an Associate Member, Affiliated and Interdenominational Cathedral Episcopal Synod Bishop's Council, adhering to international academic standards.
-                </p>
+                <div className="mt-4 pt-3 border-t border-gray-200 flex items-center text-xs text-[#c59b27] font-semibold">
+                  <CheckCircle2 className="w-4 h-4 mr-1.5" />
+                  <span>HTU Principle</span>
+                </div>
               </div>
-              <div className="mt-6 pt-4 border-t border-gray-200">
-                <a
-                  href="/accreditation"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#c59b27] hover:text-[#0d2040] uppercase tracking-wider transition"
-                >
-                  <span>Learn More</span>
-                  <ChevronRight className="w-3.5 h-3.5" />
-                </a>
-              </div>
-            </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            {/* Card 2: Courses Offered */}
-            <div className="bg-[#fbfaf6] p-7 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition group flex flex-col justify-between">
-              <div>
-                <div className="w-12 h-12 rounded-lg bg-[#0d2040] text-[#c59b27] flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
-                  <BookOpen className="w-6 h-6" />
-                </div>
-                <h3 className="text-lg font-serif font-bold text-[#0d2040] mb-3">
-                  Courses Offered
-                </h3>
-                <p className="text-xs text-gray-600 leading-relaxed">
-                  Hope Theological University offers distance and online Biblical and Theological education. Students are privileged with the opportunity to earn their Diploma, Bachelor, Master, and Doctorate from the comfort of their own home or office.
+      {/* Section 3: WHO WE ARE? */}
+      <section className="py-16 bg-[#0d2040] text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#c59b27_1px,transparent_1px)] [background-size:16px_16px]" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-8 space-y-5">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#c59b27]">
+                Identity &amp; Inclusivity
+              </span>
+              <h2 className="text-2xl sm:text-4xl font-serif font-bold text-white">
+                WHO WE ARE?
+              </h2>
+              <div className="space-y-4 text-sm sm:text-base text-gray-200 leading-relaxed">
+                <p>
+                  Hope Theological University education offers <strong>“Online Education”</strong> On counseling In Peace, Sports &amp; Health Education, Critical Management and other “Tailor Model” Diploma, Graduation and PG Graduation courses, Honorary Doctorate &amp; Social Award Winners.
+                </p>
+                <p>
+                  The certificate helps candidates seeking career advancement or higher pay in private sectors to settle in life well. The certificates awarded by Hope Theological University are based on work and life experience certificates. The degrees awarded by Hope Theological University with International Standards with an intention to equip and empower people irrespective of age, cast, creed and religion
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-gray-200">
+              <div className="pt-2 flex flex-wrap gap-4">
                 <a
                   href="/courses"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#c59b27] hover:text-[#0d2040] uppercase tracking-wider transition"
+                  className="px-6 py-3 bg-[#c59b27] hover:bg-[#d6aa32] text-[#0d2040] font-bold text-xs uppercase tracking-wider rounded shadow transition"
                 >
-                  <span>View All Programs</span>
-                  <ChevronRight className="w-3.5 h-3.5" />
+                  Explore Tailor Model Courses
+                </a>
+                <a
+                  href="/honorable-doctorates"
+                  className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold text-xs uppercase tracking-wider rounded border border-white/30 transition"
+                >
+                  Honorary Doctorates &amp; Awards
                 </a>
               </div>
             </div>
 
-            {/* Card 3: Who We Are */}
-            <div className="bg-[#fbfaf6] p-7 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition group flex flex-col justify-between">
-              <div>
-                <div className="w-12 h-12 rounded-lg bg-[#0d2040] text-[#c59b27] flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
-                  <GraduationCap className="w-6 h-6" />
-                </div>
-                <h3 className="text-lg font-serif font-bold text-[#0d2040] mb-3">
-                  WHO WE ARE
+            <div className="lg:col-span-4">
+              <div className="bg-[#142d54] p-6 rounded-xl border border-gray-700 shadow-xl space-y-4">
+                <h3 className="font-serif font-bold text-base text-[#c59b27] border-b border-gray-700 pb-2">
+                  Key Educational Offerings
                 </h3>
-                <p className="text-xs text-gray-600 leading-relaxed">
-                  Offering online education in Counseling in Peace, Sports & Health Education, Critical Management, and tailor-made programs. Degrees are awarded based on work and life experience with international standards, empowering individuals regardless of age, caste, creed, or religion.
-                </p>
-              </div>
-              <div className="mt-6 pt-4 border-t border-gray-200">
-                <a
-                  href="/about"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#c59b27] hover:text-[#0d2040] uppercase tracking-wider transition"
-                >
-                  <span>Read Statement</span>
-                  <ChevronRight className="w-3.5 h-3.5" />
-                </a>
+                <ul className="space-y-3 text-xs sm:text-sm text-gray-200">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-[#c59b27] mt-0.5 flex-shrink-0" />
+                    <span>Counseling in Peace, Sports &amp; Health Education</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-[#c59b27] mt-0.5 flex-shrink-0" />
+                    <span>Critical Management Studies</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-[#c59b27] mt-0.5 flex-shrink-0" />
+                    <span>"Tailor Model" Diploma, Graduation &amp; PG Courses</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-[#c59b27] mt-0.5 flex-shrink-0" />
+                    <span>Honorary Doctorate &amp; Social Award Winners</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-[#c59b27] mt-0.5 flex-shrink-0" />
+                    <span>Work &amp; Life Experience Certificates</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Conferred Doctorates Preview Section */}
+      {/* Section 4: CONFESSION OF FAITH HTU */}
+      <section className="py-16 bg-[#fbfaf6]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#c59b27]">
+              Doctrinal Foundation
+            </span>
+            <h2 className="text-2xl sm:text-4xl font-serif font-bold text-[#0d2040] mt-1">
+              CONFESSION OF FAITH HTU
+            </h2>
+            <div className="w-16 h-1 bg-[#c59b27] mx-auto mt-3 mb-4 rounded" />
+            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+              The fundamental biblical convictions and doctrinal confession of Hope Theological University.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {confessionArticles.map((art) => (
+              <div 
+                key={art.num} 
+                className="bg-white p-6 rounded-lg border border-gray-200 hover:border-[#c59b27]/60 hover:shadow-md transition flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="font-serif font-bold text-lg text-[#c59b27]">
+                      Article {art.num}
+                    </span>
+                    <Flame className="w-4 h-4 text-[#0d2040] opacity-50" />
+                  </div>
+                  <h3 className="font-serif font-bold text-base text-[#0d2040] mb-2 leading-snug">
+                    {art.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
+                    {art.text}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 5: STATEMENT OF FAITH */}
+      <section className="py-16 bg-white border-t border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#c59b27]">
+              Strategic Aims &amp; Objectives
+            </span>
+            <h2 className="text-2xl sm:text-4xl font-serif font-bold text-[#0d2040] mt-1">
+              STATEMENT OF FAITH
+            </h2>
+            <div className="w-16 h-1 bg-[#c59b27] mx-auto mt-3 mb-4 rounded" />
+            <p className="text-xs sm:text-sm text-gray-600">
+              Upholding international standards, accreditation, and research support for theological education.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+            {statementOfFaith.map((item, idx) => (
+              <div 
+                key={idx} 
+                className="flex items-start gap-3 bg-[#fbfaf6] p-4 rounded-lg border border-gray-200 hover:border-[#c59b27]/50 transition"
+              >
+                <div className="w-6 h-6 rounded-full bg-[#0d2040] text-[#c59b27] flex items-center justify-center flex-shrink-0 text-xs font-bold mt-0.5">
+                  {idx + 1}
+                </div>
+                <span className="text-xs sm:text-sm text-gray-800 font-medium leading-relaxed">
+                  {item}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 6: Values of HOPE THEOLOGICAL UNIVERSITY */}
       <section className="py-16 bg-[#0d2040] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-4">
-            <div>
-              <span className="text-xs uppercase font-bold tracking-widest text-[#c59b27]">Honoris Causa</span>
-              <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white mt-1">
-                Distinguished Honorary Doctorates
-              </h2>
-            </div>
-            <a
-              href="/honorable-doctorates"
-              className="text-xs font-bold text-[#c59b27] hover:text-white uppercase tracking-wider flex items-center gap-1 transition"
-            >
-              <span>View All Conferred Honorees & Titles</span>
-              <ChevronRight className="w-4 h-4" />
-            </a>
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#c59b27]">
+              Core Principles
+            </span>
+            <h2 className="text-2xl sm:text-4xl font-serif font-bold text-white mt-1">
+              Values of HOPE THEOLOGICAL UNIVERSITY
+            </h2>
+            <div className="w-16 h-1 bg-[#c59b27] mx-auto mt-3 mb-4 rounded" />
+            <p className="text-xs sm:text-sm text-gray-300">
+              The foundational convictions guiding our worship, education, scholarship, and ministry partnership.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Honoree 1 */}
-            <div className="bg-[#142d54] rounded-lg p-5 border border-gray-700 flex flex-col items-center text-center">
-              <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-[#c59b27] mb-4 shadow">
-                <img src="https://htuindia.in/wp-content/uploads/2025/05/D1.jpg" alt="Dr. BOLLAVARAPU JOHN WESLY" className="w-full h-full object-cover" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            {/* 1. BASIC VALUES */}
+            <div className="bg-[#142d54] p-8 rounded-xl border border-gray-700 shadow-md flex flex-col justify-between">
+              <div>
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-lg bg-[#0d2040] text-[#c59b27] flex items-center justify-center">
+                    <Heart className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-xl font-serif font-bold text-[#c59b27]">
+                    1. BASIC VALUES
+                  </h3>
+                </div>
+                <ul className="space-y-4 text-xs sm:text-sm text-gray-200">
+                  {basicValues.map((val, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-4 h-4 text-[#c59b27] mt-0.5 flex-shrink-0" />
+                      <span className="leading-relaxed">{val}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h3 className="font-serif font-bold text-base text-white">Dr. BOLLAVARAPU JOHN WESLY</h3>
-              <p className="text-xs text-[#c59b27] mt-1 font-medium">Chairman, Rashtra Christian Minority Corporation</p>
-              <p className="text-xs text-gray-300 mt-3 leading-relaxed">
-                Conferred with the National Award of The Best Leadership (Honoris Causa) for the significant contribution to the Christian community and Humanity.
-              </p>
             </div>
 
-            {/* Honoree 2 */}
-            <div className="bg-[#142d54] rounded-lg p-5 border border-gray-700 flex flex-col items-center text-center">
-              <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-[#c59b27] mb-4 shadow">
-                <img src="https://htuindia.in/wp-content/uploads/2025/05/D2.jpg" alt="Dr. VALLEPU VARAPRASAD" className="w-full h-full object-cover" />
+            {/* 2. PRACTICAL VALUES */}
+            <div className="bg-[#142d54] p-8 rounded-xl border border-gray-700 shadow-md flex flex-col justify-between">
+              <div>
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-lg bg-[#0d2040] text-[#c59b27] flex items-center justify-center">
+                    <Target className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-xl font-serif font-bold text-[#c59b27]">
+                    2. PRACTICAL VALUES
+                  </h3>
+                </div>
+                <ul className="space-y-4 text-xs sm:text-sm text-gray-200">
+                  {practicalValues.map((val, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-4 h-4 text-[#c59b27] mt-0.5 flex-shrink-0" />
+                      <span className="leading-relaxed">{val}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h3 className="font-serif font-bold text-base text-white">Dr. VALLEPU VARAPRASAD</h3>
-              <p className="text-xs text-[#c59b27] mt-1 font-medium">Pulivendula Municipal Chairman, Andhra Pradesh</p>
-              <p className="text-xs text-gray-300 mt-3 leading-relaxed">
-                Conferred with the Degree of Doctor of Best Social Service (Honoris Causa) for the exemplary contribution to the Nation and Humanity.
-              </p>
-            </div>
-
-            {/* Honoree 3 */}
-            <div className="bg-[#142d54] rounded-lg p-5 border border-gray-700 flex flex-col items-center text-center">
-              <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-[#c59b27] mb-4 shadow">
-                <img src="https://htuindia.in/wp-content/uploads/2025/05/D3.jpg" alt="Dr. VEMPATI RAGHURAM" className="w-full h-full object-cover" />
-              </div>
-              <h3 className="font-serif font-bold text-base text-white">Dr. VEMPATI RAGHURAM</h3>
-              <p className="text-xs text-[#c59b27] mt-1 font-medium">High Court Advocate of Andhra Pradesh</p>
-              <p className="text-xs text-gray-300 mt-3 leading-relaxed">
-                Conferred with the Degree of Doctor of Philosophy (Thesis Causa) for History of Roman Catholic Church.
-              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Online Verification & Results CTA Banner */}
+      {/* Online Verification & Academic Actions CTA Banner */}
       <section className="py-12 bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="bg-gradient-to-r from-[#0d2040] via-[#1a365d] to-[#0d2040] rounded-xl p-8 sm:p-10 text-white flex flex-col lg:flex-row items-center justify-between gap-8 shadow-lg">
             <div className="space-y-2 text-center lg:text-left">
-              <span className="text-xs uppercase font-bold text-[#c59b27] tracking-wider">Fast & Transparent</span>
+              <span className="text-xs uppercase font-bold text-[#c59b27] tracking-wider">Fast &amp; Transparent</span>
               <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white">
-                Certificate Verification & Examination Results
+                Certificate Verification &amp; Academic Programs
               </h3>
               <p className="text-xs sm:text-sm text-gray-200 max-w-xl">
-                Employers, verification agencies, and students can authenticate diplomas, degrees, and verify semester exam marks directly online.
+                Hope Theological University empowers students and ministers worldwide. Verify your certificate credentials or enroll in our degree programs online.
               </p>
             </div>
             <div className="flex flex-wrap gap-4 flex-shrink-0">
@@ -369,10 +660,10 @@ export default function HomePage() {
                 Verify Certificate
               </a>
               <a
-                href="/results"
+                href="/courses"
                 className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold text-xs uppercase tracking-wider rounded border border-white/30 transition"
               >
-                Check Results
+                View All Programs
               </a>
             </div>
           </div>
